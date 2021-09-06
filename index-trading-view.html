@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- 
@@ -35,6 +35,9 @@
     <!-- CORE CSS FRAMEWORK - END -->
 
     <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen" />
 
     <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
 
@@ -196,6 +199,9 @@
     </div>
     <!-- END TOPBAR -->
     <!-- START CONTAINER -->
+
+
+
     <div class="page-container row-fluid container-fluid">
 
         <!-- SIDEBAR - START -->
@@ -208,13 +214,13 @@
 
                 <ul class='wraplist'>
 <!--                    <li class='menusection'>我的</li>-->
-                    <li class="open">
+                    <li class="">
                         <a href="index-dashboard.html">
                             <i class="fa fa-th-large"></i>
                             <span class="title">概览</span>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="open">
                         <a href="index-trading-view.html">
                             <i class="fa fa-bullseye"></i>
                             <span class="title">链上交易溯源</span>
@@ -288,10 +294,8 @@
             <!-- MAIN MENU - END -->
 
         </div>
-            <!-- MAIN MENU - END -->
-
-        </div>
         <!--  SIDEBAR - END -->
+
         <!-- START CONTENT -->
         <section id="main-content" class=" ">
             <div class="wrapper main-wrapper row" style=''>
@@ -301,248 +305,213 @@
 
                         <div class="pull-left">
                             <!-- PAGE HEADING TAG - START -->
-                            <h1 class="title">个人资料</h1>
+                            <h1 class="title">链上交易溯源</h1>
                             <!-- PAGE HEADING TAG - END -->
                         </div>
 
-                        <div class="pull-right hidden-xs">
-                            <ol class="breadcrumb">
-                                <li>
-                                    <a href="index-dashboard.html"><i class="fa fa-home"></i>概览</a>
-                                </li>
-                                <li class="active">
-                                    <strong>个人资料</strong>
-                                </li>
-                            </ol>
-                        </div>
-
                     </div>
                 </div>
-                <div class="clearfix"></div>
-                <!-- MAIN CONTENT AREA STARTS -->
+                
+            <div class="clearfix"></div>
+                
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="clearfix"></div>
+
 
                 <div class="col-lg-12">
-                    
-                    <div class="row">
-                        
-                        <div class="col-md-4 col-sm-6 col-xs-12">
+                    <section class="box" style="border-left: 3px solid #e77512;">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">历史交易</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
 
-                            <section class="box has-border-left-3">
-                                <div class="content-body">    
-                                    
-                                   <div class="uprofile-image mt-30">
-                                        <img alt="" src="data/profile/jhwang.png" class="img-responsive">
+                                    <div class="table-responsive" data-pattern="priority-columns">
+                                        <table id="tech-companies-1" class="table table-small-font no-mb table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-priority="2">交易ID</th>
+                                                    <th data-priority="2">交易类型</th>
+                                                    <th data-priority="2">区块高度</th>
+                                                    <th data-priority="2">出块时间</th>
+                                                    <th data-priority="2">发起者</th>
+                                                    <th data-priority="2">接收者</th>
+                                                    <th data-priority="2">金额</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o pending" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-pending">资源出售</span></td>
+                                                    <td><span class="status-pending">3210</span></td>
+                                                    <td><i class="fa fa-plus pending normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-pending">0xea67...</span></td>
+                                                    <td><span class="status-pending">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o warning" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-warning">资源出售</span></td>
+                                                    <td><span class="status-warning">3210</span></td>
+                                                    <td><i class="fa fa-plus warning normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-warning">0xea67...</span></td>
+                                                    <td><span class="status-warning">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><i class="fa fa-dot-circle-o complete" width="1"></i>0xcb51...</td>
+                                                    <td><span class="status-complete">资源出售</span></td>
+                                                    <td><span class="status-complete">3210</span></td>
+                                                    <td><i class="fa fa-plus complete normal"></i>Sep-06-2021 12:48:36</td>
+                                                    <td><span class="status-complete">0xea67...</span></td>
+                                                    <td><span class="status-complete">0x7bfc...</span></td>
+                                                    <td><i class="fa fa-rmb"></i>66.66</td>
+                                                </tr> 
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="uprofile-name">
-                                        <h3>
-                                            <a href="#">Jiaheng Wang</a>
-                                            <!-- Available statuses: online, idle, busy, away and offline -->
-                                            <span class="uprofile-status online"></span>
-                                        </h3>
-                                        <p class="uprofile-title"> Trader</p>
-                                    </div>
-                                    <div class="uprofile-info">
-                                        <ul class="list-unstyled">
-                                            <li><i class='fa fa-home'></i> New York, USA</li>
-                                            <li><i class='fa fa-user'></i> 340 Contacts</li>
-                                            <li><i class='fa fa-suitcase'></i> Tech Lead, YIAM</li>
-                                        </ul>
-                                    </div>
-                                    <div class="uprofile-buttons">
-                                        <a class="btn btn-md btn-primary">Send Message</a>
-                                        <a class="btn btn-md btn-primary">Add as Friend</a>
-                                    </div>
-                                    <div class=" uprofile-social no-mb">
 
-                                        <a href="#" class="btn btn-primary btn-md facebook"><i class="fa fa-facebook icon-xs"></i></a>
-                                        <a href="#" class="btn btn-primary btn-md twitter"><i class="fa fa-twitter icon-xs"></i></a>
-                                        <a href="#" class="btn btn-primary btn-md google-plus"><i class="fa fa-google-plus icon-xs"></i></a>
-                                        <a href="#" class="btn btn-primary btn-md dribbble"><i class="fa fa-dribbble icon-xs"></i></a>
-
-                                    </div>
-                                    
                                 </div>
-                            </section>
+                            </div>
                         </div>
-
-                        <div class="col-lg-4 col-sm-8 col-xs-12">
-                            <section class="box has-border-left-3">
-                               
-                                <div class="content-body ">    
-                                    <div class="row">
-                                       
-                                        <div class="form-container">
-                                            <form action="#">
-
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        
-                                                        <div class="col-xs-12 mb-20 mt-30 no-pl no-pr">
-                                                        
-                                                            <div class="col-sm-12 avatar-img no-pl no-pr">
-                                                                <div class="ico-img">
-                                                                    <i class="cc RADS" title="RADS"></i>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <h4 class="bold no-mt mb-5">WizCoin</h4>
-                                                                    <span class="desc" style="margin-left:0">Upcoming ICO</span>
-                                                                </div>
-                                                                <h4><span class="green">$10,000,000</span> / $30,000,000</h4>
-                                                                <h4 class="green"><i class="fa fa-level-up green"></i> 53,78 %</h4>
-                                                            </div>
-
-                                                        </div>
-                                                        
-                                                        <div class="pull-left">
-                                                            <h4><i class="fa fa-info-circle color-primary complete f-s-14"></i><small>ICO starts 2d</small></h4>
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            <button type="submit" style="margin-right:0" class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Buy Tokens</button>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-8 col-xs-12">
-                            <section class="box has-border-left-3">
-                               
-                                <div class="content-body ">    
-                                    <div class="row">
-                                       
-                                        <div class="form-container">
-                                            <form action="#">
-
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        
-                                                        <div class="col-xs-12 mb-20 mt-30 no-pl no-pr">
-                                                        
-                                                            <div class="col-sm-12 avatar-img no-pl no-pr">
-                                                                <div class="ico-img">
-                                                                    <i class="cc RBY" title="Rubycoin"></i>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <h4 class="bold no-mt mb-5">Rubycoin</h4>
-                                                                    <span class="desc" style="margin-left:0">Upcoming ICO</span>
-                                                                </div>
-                                                                <h4><span class="green">$10,000,000</span> / $30,000,000</h4>
-                                                                <h4 class="green"><i class="fa fa-level-up green"></i> 34,26 %</h4>
-                                                            </div>
-
-                                                        </div>
-                                                        
-                                                        <div class="pull-left">
-                                                            <h4><i class="fa fa-info-circle color-primary complete f-s-14"></i><small>ICO ends 7d</small></h4>
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            <button type="submit" style="margin-right:0" class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Buy Tokens</button>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-8 col-xs-12">
-                            <section class="box has-border-left-3">
-                               
-                                <div class="content-body ">    
-                                    <div class="row">
-                                       
-                                        <div class="form-container">
-                                            <form action="#">
-
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        
-                                                        <div class="col-xs-12 mb-20 mt-30 no-pl no-pr">
-                                                        
-                                                            <div class="col-sm-12 avatar-img no-pl no-pr">
-                                                                <div class="ico-img">
-                                                                    <i class="cc SWIFT" title="Bitswift"></i>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <h4 class="bold no-mt mb-5">BitSwift</h4>
-                                                                    <span class="desc" style="margin-left:0">Upcoming ICO</span>
-                                                                </div>
-                                                                <h4><span class="green">$10,000,000</span> / $30,000,000</h4>
-                                                                <h4 class="green"><i class="fa fa-level-up green"></i> 53,78 %</h4>
-                                                            </div>
-
-                                                        </div>
-                                                        
-                                                        <div class="pull-left">
-                                                            <h4><i class="fa fa-info-circle color-primary complete f-s-14"></i><small>ICO starts 2d</small></h4>
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            <button type="submit" style="margin-right:0" class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Buy Tokens</button>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-8 col-xs-12">
-                            <section class="box has-border-left-3">
-                               
-                                <div class="content-body ">    
-                                    <div class="row">
-                                       
-                                        <div class="form-container">
-                                            <form action="#">
-
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        
-                                                        <div class="col-xs-12 mb-20 mt-30 no-pl no-pr">
-                                                        
-                                                            <div class="col-sm-12 avatar-img no-pl no-pr">
-                                                                <div class="ico-img">
-                                                                    <i class="cc TX" title="RADS"></i>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <h4 class="bold no-mt mb-5">TransferCoin</h4>
-                                                                    <span class="desc" style="margin-left:0">Upcoming ICO</span>
-                                                                </div>
-                                                                <h4><span class="green">$10,000,000</span> / $30,000,000</h4>
-                                                                <h4 class="green"><i class="fa fa-level-up green"></i> 53,78 %</h4>
-                                                            </div>
-
-                                                        </div>
-                                                        
-                                                        <div class="pull-left">
-                                                            <h4><i class="fa fa-info-circle color-primary complete f-s-14"></i><small>ICO starts 2d</small></h4>
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            <button type="submit" style="margin-right:0" class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Buy Tokens</button>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-
-                    </div>
+                    </section>
                 </div>
+
+                <div class="clearfix"></div>
 
                 <!-- MAIN CONTENT AREA ENDS -->
             </div>
@@ -736,7 +705,15 @@
 
     <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
 
-    <script src="assets/plugins/autosize/autosize.min.js"></script>
+    <script src="assets/plugins/echarts/echarts-custom-for-dashboard.js"></script>
+
+    <script src="assets/plugins/flot-chart/jquery.flot.js"></script>
+    <script src="assets/plugins/flot-chart/jquery.flot.time.js"></script>
+    <script src="assets/js/chart-flot.js"></script>
+
+    <script src="assets/plugins/morris-chart/js/raphael-min.js"></script>
+    <script src="assets/plugins/morris-chart/js/morris.min.js"></script>
+    <script src="assets/js/chart-morris.js"></script>
     <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
 
     <!-- CORE TEMPLATE JS - START -->

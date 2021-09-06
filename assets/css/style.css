@@ -2152,9 +2152,11 @@ ul.states li {
 i.pending{color: #12bce7;font-size: 12px;margin-right: 7px}
 i.complete{color: #6fc334;font-size: 12px;margin-right: 7px}
 i.cancelled{color: #1a63d1;font-size: 12px;margin-right: 7px}
+i.warning{color: #c40810;font-size: 12px;margin-right: 7px}
 .status-pending{border: 1px solid #12bce7;border-radius: 12px;padding: 1px 10px 3px;font-size: 13px}
 .status-complete{border: 1px solid #6fc334;border-radius: 12px;padding: 1px 10px 3px;font-size: 13px}
 .status-cancelled{border: 1px solid #1a63d1;border-radius: 12px;padding: 1px 10px 3px;font-size: 13px}
+.status-warning{border: 1px solid #c40810;border-radius: 12px;padding: 1px 10px 3px;font-size: 13px}
 
 .price.ng-scope{
     visibility: visible !important;
@@ -4444,19 +4446,20 @@ blockquote.accent{ border-color: #E91E63; }
 ----------------------------------------------*/
 
 .table>thead>tr>td.primary, .table>tbody>tr>td.primary, .table>tfoot>tr>td.primary, .table>thead>tr>th.primary, .table>tbody>tr>th.primary, .table>tfoot>tr>th.primary, .table>thead>tr.primary>td, .table>tbody>tr.primary>td, .table>tfoot>tr.primary>td, .table>thead>tr.primary>th, .table>tbody>tr.primary>th, .table>tfoot>tr.primary>th {
-    background-color: rgba(31, 181, 172, 0.2);
+    background-color: rgba(31, 181, 172, 0.2);overflow:hidden;
 }
 .table>thead>tr>td.accent, .table>tbody>tr>td.accent, .table>tfoot>tr>td.accent, .table>thead>tr>th.accent, .table>tbody>tr>th.accent, .table>tfoot>tr>th.accent, .table>thead>tr.accent>td, .table>tbody>tr.accent>td, .table>tfoot>tr.accent>td, .table>thead>tr.accent>th, .table>tbody>tr.accent>th, .table>tfoot>tr.accent>th {
-    background-color: rgba(250, 133, 100, .2);
+    background-color: rgba(250, 133, 100, .2);overflow:hidden;
 }
 .table>thead>tr>td.purple, .table>tbody>tr>td.purple, .table>tfoot>tr>td.purple, .table>thead>tr>th.purple, .table>tbody>tr>th.purple, .table>tfoot>tr>th.purple, .table>thead>tr.purple>td, .table>tbody>tr.purple>td, .table>tfoot>tr.purple>td, .table>thead>tr.purple>th, .table>tbody>tr.purple>th, .table>tfoot>tr.purple>th {
-    background-color: rgba(153, 114, 181, .2);
+    background-color: rgba(153, 114, 181, .2);overflow:hidden;
 }
 .table>thead>tr>td.secondary, .table>tbody>tr>td.secondary, .table>tfoot>tr>td.secondary, .table>thead>tr>th.secondary, .table>tbody>tr>th.secondary, .table>tfoot>tr>th.secondary, .table>thead>tr.secondary>td, .table>tbody>tr.secondary>td, .table>tfoot>tr.secondary>td, .table>thead>tr.secondary>th, .table>tbody>tr.secondary>th, .table>tfoot>tr.secondary>th {
-    background-color: #9e9e9e;
+    background-color: #9e9e9e;overflow:hidden;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-color: #eaeaea;
+overflow:hidden;
     padding: 10px;
 }
 /*---------------------------------------------
@@ -4464,10 +4467,10 @@ blockquote.accent{ border-color: #E91E63; }
 ----------------------------------------------*/
 
 table.dataTable thead th, table.dataTable thead td {
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;overflow:hidden;
 }
 table.dataTable tfoot th, table.dataTable tfoot td {
-    border-top: 1px solid #bbbbbb;
+    border-top: 1px solid #bbbbbb;overflow:hidden;
 }
 table.dataTable.no-footer {
     border-bottom: 1px solid #bbbbbb;
