@@ -33,7 +33,7 @@ jQuery(function($) {
                 , {
                     x: '2018 Q1', y: 4, z: 4
                 }
-                ], resize: true, redraw: true, xkey: 'x', ykeys: ['y', 'z'], labels: ['Y', 'Z'], lineColors: ['#e8962e', '#f46e0f'], pointFillColors: ['#f46e0f']
+                ], resize: true, redraw: true, xkey: 'x', ykeys: ['y', 'z'], labels: ['Y', 'Z'], lineColors: ['#07fff7', '#12bce7'], pointFillColors: ['#1a63d1']
             }
             ).on('click', function(i, row) {
                 console.log(i, row);
@@ -56,7 +56,7 @@ jQuery(function($) {
                 , {
                     x: '2018 Q4', y: 2, z: 4, a: 3
                 }
-                ], resize: true, redraw: true, xkey: 'x', ykeys: ['y', 'z', 'a'], labels: ['Y', 'Z', 'A'], barColors: ['#e8962e', '#3F51B5', '#f46e0f']
+                ], resize: true, redraw: true, xkey: 'x', ykeys: ['y', 'z', 'a'], labels: ['Y', 'Z', 'A'], barColors: ['#12bce7', '#3F51B5', '#1a63d1']
             }
             ).on('click', function(i, row) {
                 console.log(i, row);
@@ -98,7 +98,7 @@ jQuery(function($) {
             }
             ];
             Morris.Line( {
-                element: 'morris_line_graph', data: day_data, resize: true, xkey: 'period', ykeys: ['licensed', 'sorned'], labels: ['Registered', 'Purchase'], lineColors: ['#e8962e', '#3F51B5'], pointFillColors: ['#f46e0f']
+                element: 'morris_line_graph', data: day_data, resize: true, xkey: 'period', ykeys: ['licensed', 'sorned'], labels: ['Registered', 'Purchase'], lineColors: ['#07fff7', '#3F51B5'], pointFillColors: ['#1a63d1']
             }
             );
         }
@@ -106,10 +106,10 @@ jQuery(function($) {
             /*Donut Graph*/
             Morris.Donut( {
                 element: 'morris_donut_graph', data: [ {
-                    value: 45, label: 'active deals'
+                    value: 45, label: '剩余空间'
                 }
                 , {
-                    value: 55, label: 'unconfiremed'
+                    value: 55, label: '已用空间'
                 }
                 ], resize: true, redraw: true, backgroundColor: '#ffffff', labelColor: '#999999', colors: [ "40-#e8962e-#e45131:70-#e45131-#e45131:90-#e45131", '#f7f7f7']
             }
@@ -146,7 +146,7 @@ jQuery(function($) {
             }
             ];
             Morris.Line( {
-                element: 'morris_negative_graph', data: neg_data, resize: true, redraw: true, xkey: 'period', ykeys: ['a'], labels: ['Series A'], lineColors: ['#e8962e', '#3F51B5'], units: '%'
+                element: 'morris_negative_graph', data: neg_data, resize: true, redraw: true, xkey: 'period', ykeys: ['a'], labels: ['Series A'], lineColors: ['#1a63d1', '#3F51B5'], units: '%'
             }
             );
         }
@@ -185,7 +185,7 @@ jQuery(function($) {
             }
             ];
             Morris.Line( {
-                element: 'morris_nogrid_graph', grid: false, resize: true, redraw: true, data: day_data, xkey: 'period', ykeys: ['licensed', 'sorned'], labels: ['Licensed', 'SORN'], lineColors: ['#e8962e', '#3F51B5']
+                element: 'morris_nogrid_graph', grid: false, resize: true, redraw: true, data: day_data, xkey: 'period', ykeys: ['licensed', 'sorned'], labels: ['Licensed', 'SORN'], lineColors: ['#1a63d1', '#3F51B5']
             }
             );
         }
@@ -224,7 +224,7 @@ jQuery(function($) {
             }
             ];
             Morris.Line( {
-                element: 'morris_noncontinuous_graph', data: day_data, resize: true, redraw: true, xkey: 'period', ykeys: ['licensed', 'sorned', 'other'], labels: ['Licensed', 'SORN', 'Other'], lineColors: ['#e8962e', '#3F51B5'], /* custom label formatting with `xLabelFormat` */
+                element: 'morris_noncontinuous_graph', data: day_data, resize: true, redraw: true, xkey: 'period', ykeys: ['licensed', 'sorned', 'other'], labels: ['Licensed', 'SORN', 'Other'], lineColors: ['#1a63d1', '#3F51B5'], /* custom label formatting with `xLabelFormat` */
                 xLabelFormat: function(d) {
                     return (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear();
                 }
@@ -249,7 +249,7 @@ jQuery(function($) {
                 , {
                     x: '2018 Q4', y: 2, z: 4, a: 3
                 }
-                ], resize: true, redraw: true, xkey: 'x', ykeys: ['y', 'z', 'a'], labels: ['Y', 'Z', 'A'], barColors: ['#e8962e', '#3F51B5', '#f46e0f'], stacked: true
+                ], resize: true, redraw: true, xkey: 'x', ykeys: ['y', 'z', 'a'], labels: ['Y', 'Z', 'A'], barColors: ['#07fff7', '#3F51B5', '#1a63d1'], stacked: true
             }
             );
         }
